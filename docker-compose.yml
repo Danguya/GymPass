@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  database:
+    image: bitnami/postgresql
+    restart: always
+    container_name: gympass_db
+    user: root
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgresql-persistence:/bitnami/postgresql/
+    env_file: .env
+    environment:
+      - POSTGRESQL_USERNAME=${POSTGRESQL_USERNAME}
+      - POSTGRESQL_PASSWORD=${POSTGRESQL_PASSWORD}
+      - POSTGRESQL_DATABASE=${POSRGRESQL_DATABASE}

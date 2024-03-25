@@ -8,6 +8,8 @@ prisma.user.create({
     name: 'Wilmy Danguya',
     email: 'daniel.yava16@gmail.com',
   },
+}).then(()=>{
+  console.log("Created")
 })
 
 export const app = fastify()
