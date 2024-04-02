@@ -1,5 +1,6 @@
 import { prisma } from '@/lib/prisma'
 import { Prisma } from '@prisma/client'
+
 import { UsersRepository } from '../users-repository'
 
 export class PrismaUsersRepository implements UsersRepository {
@@ -9,6 +10,7 @@ export class PrismaUsersRepository implements UsersRepository {
         id,
       },
     })
+
     return user
   }
 
@@ -18,6 +20,7 @@ export class PrismaUsersRepository implements UsersRepository {
         email,
       },
     })
+
     return user
   }
 
